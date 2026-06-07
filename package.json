@@ -1,0 +1,78 @@
+{
+  "name": "@meok/sdk",
+  "version": "0.1.0",
+  "description": "Official TypeScript SDK for the MEOK Attestation API — sign + verify HMAC-signed compliance attestations across the MEOK trade-compliance ecosystem.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean --target node18",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src test",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "keywords": [
+    "meok",
+    "compliance",
+    "attestation",
+    "hmac",
+    "eu-ai-act",
+    "uk-ai-bill",
+    "fleet-compliance",
+    "dvsa",
+    "fors",
+    "trade-compliance",
+    "mcp",
+    "audit"
+  ],
+  "author": "Nicholas Templeman <nicholas@meok.ai>",
+  "license": "MIT",
+  "homepage": "https://haulage.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSOAI-ORG/meok-sdk-typescript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CSOAI-ORG/meok-sdk-typescript/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^9.15.0",
+    "msw": "^2.6.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
