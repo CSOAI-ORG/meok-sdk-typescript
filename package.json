@@ -1,6 +1,6 @@
 {
-  "name": "@meok/sdk",
-  "version": "0.1.0",
+  "name": "meok-sdk-ts",
+  "version": "3.1.0",
   "description": "Official TypeScript SDK for the MEOK Attestation API — sign + verify HMAC-signed compliance attestations across the MEOK trade-compliance ecosystem.",
   "type": "module",
   "main": "./dist/index.cjs",
