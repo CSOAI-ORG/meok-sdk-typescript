@@ -38,4 +38,26 @@ export type {
   VerifyResult,
 } from "./types.js";
 
+// ── CSOAI sub-module re-exports ────────────────────────────────────
+export { CSOAIClient } from "./csoai/client.js";
+export {
+  CSOAIError,
+  CSOAINetworkError,
+  CSOAIAPIError,
+  CSOAIAuthError,
+  CSOAIValidationError,
+} from "./csoai/errors.js";
+export type {
+  Region,
+  ComplianceMap,
+  Framework,
+  CrosswalkRow,
+  Crosswalk,
+  DOMEStatus,
+  CouncilVote,
+  CouncilVotes,
+  SigilVerification,
+  CSOAIClientOptions,
+} from "./csoai/types.js";
+
 export const VERSION = "0.1.0";

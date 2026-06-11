@@ -17,6 +17,16 @@
         "default": "./dist/index.cjs"
       }
     },
+    "./csoai": {
+      "import": {
+        "types": "./dist/csoai/index.d.ts",
+        "default": "./dist/csoai/index.js"
+      },
+      "require": {
+        "types": "./dist/csoai/index.d.cts",
+        "default": "./dist/csoai/index.cjs"
+      }
+    },
     "./package.json": "./package.json"
   },
   "files": [
@@ -29,7 +39,7 @@
     "node": ">=18.17"
   },
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts --clean --target node18",
+    "build": "tsup src/index.ts src/csoai/index.ts --format esm,cjs --dts --clean --target node18",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
     "test": "vitest run",
     "test:watch": "vitest",
