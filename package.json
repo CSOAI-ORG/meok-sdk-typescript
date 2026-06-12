@@ -1,7 +1,7 @@
 {
   "name": "meok-sdk-ts",
   "version": "3.1.0",
-  "description": "Official TypeScript SDK for the MEOK Attestation API — sign + verify HMAC-signed compliance attestations across the MEOK trade-compliance ecosystem.",
+  "description": "Official TypeScript SDK for the MEOK Attestation API \u2014 sign + verify HMAC-signed compliance attestations across the MEOK trade-compliance ecosystem.",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -64,7 +64,7 @@
   ],
   "author": "Nicholas Templeman <nicholas@meok.ai>",
   "license": "MIT",
-  "homepage": "https://haulage.app",
+  "homepage": "https://meok.ai",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CSOAI-ORG/meok-sdk-typescript.git"
